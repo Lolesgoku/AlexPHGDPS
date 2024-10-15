@@ -66,6 +66,21 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        /* Estilos para la tabla de jugadores */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
     </style>
 </head>
 <body>
@@ -112,7 +127,60 @@
     <section id="comunidad" class="section">
         <h2>Únete a la Comunidad</h2>
         <p>Conéctate con otros jugadores y comparte tus mejores creaciones.</p>
-        <a href="https://discord.gg/nHhpwcJG8x" class="btn" target="_blank">Unirte al Discord</a> <!-- Enlace al servidor de Discord -->
+        <a href="https://discord.gg/nHhpwcJG8x" class="btn" target="_blank">Unirte al Discord</a>
+    </section>
+
+    <!-- Sección de jugadores -->
+    <section id="jugadores" class="section">
+        <h2>Jugadores Registrados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Fecha de Registro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // Conexión a la base de datos
+                $servername = "localhost"; // Cambia esto si tu servidor es diferente
+                $username = "gdps_alexphgdps"; // Tu usuario
+                $password = "x3ndg6xi1k9kwe3gackj5e"; // Tu contraseña
+                $dbname = "nombre_de_tu_base_de_datos"; // Cambia esto al nombre de tu base de datos
+
+                // Crear conexión
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Verificar conexión
+                if ($conn->connect_error) {
+                    die("Error de conexión: " . $conn->connect_error);
+                }
+
+                // Consulta para obtener todos los jugadores
+                $sql = "SELECT * FROM jugadores"; // Cambia esto al nombre de tu tabla de jugadores
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // Mostrar datos de cada fila
+                    while($row = $result->fetch_assoc()) {
+                        echo "<tr>
+                                <td>" . $row["id"] . "</td>
+                                <td>" . $row["nombre"] . "</td>
+                                <td>" . $row["correo"] . "</td>
+                                <td>" . $row["fecha_registro"] . "</td>
+                              </tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='4'>No hay jugadores registrados.</td></tr>";
+                }
+
+                // Cerrar conexión
+                $conn->close();
+                ?>
+            </tbody>
+        </table>
     </section>
 
     <!-- Pie de página -->
