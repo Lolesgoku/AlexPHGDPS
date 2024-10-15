@@ -6,14 +6,89 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AlexPHGPDS</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para el modal */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .modal-content input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .modal-content button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close {
+            color: red;
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Estilos para el botón en la esquina */
+        .db-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f39c12;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Botón en la esquina para acceder a la base de datos -->
+    <a class="db-btn" id="openModal">Acceder a la Base de Datos</a>
+
+    <!-- Modal para iniciar sesión -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Acceder a la Base de Datos</h2>
+            <input type="text" id="usuario" placeholder="Usuario">
+            <input type="password" id="contrasena" placeholder="Contraseña">
+            <button id="loginBtn">Iniciar Sesión</button>
+        </div>
+    </div>
+
     <!-- Encabezado -->
     <header>
         <div class="container">
             <h1>Bienvenido a AlexPHGPDS</h1>
             <p>Tu servidor personalizado de Geometry Dash</p>
-            <!-- Cambié el botón para que enlace a la página de descargas -->
             <a href="descargas.html" class="btn">Descargar GDPS</a>
         </div>
     </header>
@@ -33,8 +108,6 @@
         </div>
     </section>
 
-    <!-- Eliminé la segunda sección de descarga y dejé solo la de novedades -->
-
     <!-- Sección de comunidad -->
     <section id="comunidad" class="section">
         <h2>Únete a la Comunidad</h2>
@@ -46,5 +119,35 @@
     <footer>
         <p>&copy; 2024 AlexPHGPDS. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        // Mostrar el modal al hacer clic en el botón
+        document.getElementById("openModal").addEventListener("click", function() {
+            document.getElementById("loginModal").style.display = "flex";
+        });
+
+        // Cerrar el modal
+        document.getElementById("closeModal").addEventListener("click", function() {
+            document.getElementById("loginModal").style.display = "none";
+        });
+
+        // Iniciar sesión al hacer clic en el botón de login
+        document.getElementById("loginBtn").addEventListener("click", function() {
+            var usuario = document.getElementById("usuario").value;
+            var contrasena = document.getElementById("contrasena").value;
+
+            // Validar credenciales (ejemplo básico)
+            var usuarioCorrecto = "admin";  // Cambia esto a tu usuario
+            var contrasenaCorrecta = "123456";  // Cambia esto a tu contraseña
+
+            if (usuario === usuarioCorrecto && contrasena === contrasenaCorrecta) {
+                // Redirigir al phpMyAdmin
+                window.location.href = "http://url_phpmyadmin.com";  // Reemplaza con tu URL de phpMyAdmin
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+        });
+    </script>
+
 </body>
 </html>
