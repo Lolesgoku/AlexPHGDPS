@@ -4,83 +4,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AlexPHGPDS</title>
+    <title>AlexPHGPDS - Nuevo Diseño</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Estilos para el modal */
-        .modal {
-            display: none; 
-            position: fixed;
-            z-index: 1; 
-            left: 0;
-            top: 0;
-            width: 100%; 
-            height: 100%; 
-            background-color: rgba(0, 0, 0, 0.5); 
-            justify-content: center;
-            align-items: center;
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2f;
+            color: #fff;
         }
 
-        .modal-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            width: 300px;
+        /* Encabezado */
+        header {
+            background-color: #2b2b3c;
+            padding: 40px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #ff7f50;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Botón principal */
+        .btn {
+            background-color: #ff7f50;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(255, 127, 80, 0.4);
+        }
+
+        /* Sección de novedades */
+        .section {
+            padding: 50px;
             text-align: center;
         }
 
-        .modal-content input {
-            margin: 10px 0;
-            padding: 10px;
-            width: 100%;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+        .novedades-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
         }
 
-        .modal-content button {
-            background-color: #28a745;
-            color: #fff;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        .novedad {
+            background-color: #2f2f4f;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .close {
-            color: red;
-            float: right;
-            font-size: 20px;
-            cursor: pointer;
+        .novedad:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* Estilos para el botón en la esquina */
+        .novedad h3 {
+            color: #ff7f50;
+            margin-top: 0;
+        }
+
+        /* Sección de comunidad */
+        #comunidad {
+            background-color: #292940;
+        }
+
+        /* Botón en la esquina para acceder a la base de datos */
         .db-btn {
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: #f39c12;
+            background-color: #ff7f50;
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
             cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 127, 80, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .db-btn:hover {
+            transform: scale(1.1);
         }
 
-        /* Estilos para la tabla de jugadores */
+        /* Tabla de jugadores */
         table {
             width: 100%;
-            border-collapse: collapse;
             margin-top: 20px;
+            background-color: #333;
+            color: white;
+            border-collapse: collapse;
         }
+
         th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 1px solid #444;
         }
+
         th {
-            background-color: #f2f2f2;
+            background-color: #444;
         }
+
+        tr:hover {
+            background-color: #555;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #2b2b3c;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-200px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Input en el modal */
+        .modal-content input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: white;
+        }
+
+        .modal-content button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            color: #ccc;
+        }
+
     </style>
 </head>
 <body>
@@ -142,62 +244,36 @@
                     <th>Fecha de Registro</th>
                 </tr>
             </thead>
-            <tbody id="jugadores-tbody">
-                <!-- Los jugadores se cargarán aquí -->
+            <tbody>
+                <!-- Aquí se cargarán los jugadores con PHP -->
             </tbody>
         </table>
     </section>
 
-    <!-- Pie de página -->
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 AlexPHGPDS. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // Mostrar el modal al hacer clic en el botón
-        document.getElementById("openModal").addEventListener("click", function() {
-            document.getElementById("loginModal").style.display = "flex";
+        // Script para abrir y cerrar el modal
+        const openModal = document.getElementById('openModal');
+        const modal = document.getElementById('loginModal');
+        const closeModal = document.getElementById('closeModal');
+
+        openModal.addEventListener('click', function() {
+            modal.style.display = 'flex';
         });
 
-        // Cerrar el modal
-        document.getElementById("closeModal").addEventListener("click", function() {
-            document.getElementById("loginModal").style.display = "none";
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
         });
 
-        // Iniciar sesión al hacer clic en el botón de login
-        document.getElementById("loginBtn").addEventListener("click", function() {
-            var usuario = document.getElementById("usuario").value;
-            var contrasena = document.getElementById("contrasena").value;
-
-            // Validar credenciales con las que proporcionaste
-            var usuarioCorrecto = "gdps_alexphgdps";
-            var contrasenaCorrecta = "x3ndg6xi1k9kwe3gackj5e";
-
-            if (usuario === usuarioCorrecto && contrasena === contrasenaCorrecta) {
-                // Redirigir al phpMyAdmin
-                window.location.href = "https://pma.fhgdps.com/index.php?route=/&route=%2F"; // Nueva URL
-            } else {
-                alert("Usuario o contraseña incorrectos");
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
             }
-        });
-
-        // Cargar los datos de jugadores desde el archivo JSON
-        fetch('jugadores.json')
-            .then(response => response.json())
-            .then(data => {
-                const tbody = document.getElementById('jugadores-tbody');
-                data.forEach(jugador => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${jugador.id}</td>
-                        <td>${jugador.nombre}</td>
-                        <td>${jugador.correo}</td>
-                        <td>${jugador.fecha_registro}</td>
-                    `;
-                    tbody.appendChild(row);
-                });
-            })
-            .catch(error => console.error('Error al cargar los jugadores:', error));
+        }
     </script>
 
 </body>
