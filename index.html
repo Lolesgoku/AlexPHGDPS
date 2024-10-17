@@ -95,26 +95,61 @@
             background-color: #292940;
         }
 
-        /* Tabla de jugadores */
-        table {
+        /* Estilos para los formularios de registro e inicio de sesión */
+        .form-container {
+            background-color: #2f2f4f;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-container h3 {
+            color: #ff7f50;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .form-group input {
             width: 100%;
-            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
             background-color: #333;
             color: white;
-            border-collapse: collapse;
         }
 
-        th, td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #444;
+        .form-group input:focus {
+            outline: none;
+            border: 2px solid #ff7f50;
         }
 
-        th {
-            background-color: #444;
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 50px;
+            background-color: #ff7f50;
+            color: white;
+            font-size: 1.1em;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        tr:hover {
-            background-color: #555;
+        button[type="submit"]:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 127, 80, 0.4);
         }
 
         /* Footer */
@@ -164,10 +199,64 @@
         <a href="https://discord.gg/nHhpwcJG8x" class="btn" target="_blank">Unirte al Discord</a>
     </section>
 
+    <!-- Sección de registro e inicio de sesión -->
+    <section id="auth" class="section">
+        <h2>Registro e Inicio de Sesión</h2>
+
+        <!-- Formulario de registro -->
+        <div class="form-container">
+            <h3>Registrarse</h3>
+            <form id="form-registro">
+                <div class="form-group">
+                    <label for="username">Nombre de Usuario</label>
+                    <input type="text" id="username" name="username" placeholder="Ingresa tu nombre de usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+        </div>
+
+        <!-- Formulario de inicio de sesión -->
+        <div class="form-container">
+            <h3>Iniciar Sesión</h3>
+            <form id="form-login">
+                <div class="form-group">
+                    <label for="login-username">Nombre de Usuario</label>
+                    <input type="text" id="login-username" name="login-username" placeholder="Ingresa tu nombre de usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" name="login-password" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <button type="submit" class="btn">Iniciar Sesión</button>
+            </form>
+        </div>
+    </section>
+
     <!-- Pie de página -->
     <footer>
         <p>&copy; 2024 AlexPHGPDS. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Script para simular el funcionamiento de los formularios -->
+    <script>
+        document.getElementById('form-registro').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('¡Te has registrado exitosamente! (Funcionalidad aún no implementada)');
+        });
+
+        document.getElementById('form-login').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('¡Has iniciado sesión! (Funcionalidad aún no implementada)');
+        });
+    </script>
 
 </body>
 </html>
