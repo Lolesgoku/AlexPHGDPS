@@ -4,138 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AlexPHGPDS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Jugadores - AlexPHGPDS</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Estilos generales */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1e1e2f;
+        /* Estilos para el apartado de jugadores */
+        .players-section {
+            background-color: #2c2f33;
+            padding: 40px;
             color: #fff;
         }
-
-        h1, h2, h3 {
-            color: #ff7f50;
-        }
-
-        p, a {
-            color: #eee;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        /* Botón principal */
-        .btn {
-            background-color: #ff7f50;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 10px 20px rgba(255, 127, 80, 0.4);
-        }
-
-        /* Encabezado */
-        header {
-            background-color: #2b2b3c;
-            padding: 40px 0;
+        .players-section h2 {
             text-align: center;
+            margin-bottom: 30px;
+            color: #f39c12;
         }
-
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.2em;
-        }
-
-        /* Sección de novedades */
-        .section {
-            padding: 50px;
-            text-align: center;
-        }
-
-        .novedades-container {
+        .player-list {
             display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
         }
-
-        .novedad {
-            background-color: #2f2f4f;
-            border-radius: 15px;
+        .player-card {
+            background-color: #23272a;
+            border: 2px solid #f39c12;
+            border-radius: 8px;
             padding: 20px;
-            max-width: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .novedad:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .novedad h3 {
-            margin-top: 0;
-        }
-
-        /* Sección de comunidad */
-        #comunidad {
-            background-color: #292940;
-        }
-
-        /* Tabla de jugadores */
-        #jugadores {
-            background-color: #2b2b3c;
-            padding: 50px;
-        }
-
-        table {
-            width: 100%;
-            margin-top: 20px;
-            background-color: #333;
-            color: white;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #444;
-            text-align: left;
-        }
-
-        th {
-            background-color: #444;
-            color: #ff7f50;
-        }
-
-        tr:hover {
-            background-color: #555;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #222;
+            margin: 10px;
+            width: 60%;
             text-align: center;
-            padding: 20px 0;
         }
-
-        footer p {
+        .player-card h3 {
             margin: 0;
-            color: #ccc;
+            color: #f39c12;
         }
-
+        .player-card p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -143,60 +46,26 @@
     <!-- Encabezado -->
     <header>
         <div class="container">
-            <h1>Bienvenido a AlexPHGPDS</h1>
-            <p>Tu servidor personalizado de Geometry Dash</p>
-            <a href="descargas.html" class="btn">Descargar GDPS</a>
+            <h1>Jugadores Registrados en AlexPHGPDS</h1>
+            <p>Explora los jugadores que forman parte de nuestra comunidad.</p>
         </div>
     </header>
 
-    <!-- Sección de novedades -->
-    <section id="novedades" class="section">
-        <h2>Últimas Novedades</h2>
-        <div class="novedades-container">
-            <article class="novedad">
-                <h3>Actualización 1.0</h3>
-                <p>¡Se ha lanzado la primera versión de AlexPHGPDS! Nuevos niveles y desafíos exclusivos.</p>
-            </article>
-            <article class="novedad">
-                <h3>Próximo Evento: Gauntlet Contest</h3>
-                <p>¡Participa en el Gauntlet Contest! Crea niveles desafiantes y compite por grandes premios. Solo los mejores llegarán a lo más alto.</p>
-            </article>
-        </div>
-    </section>
-
     <!-- Sección de jugadores -->
-    <section id="jugadores" class="section">
+    <section class="players-section">
         <h2>Lista de Jugadores</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID de Jugador</th>
-                    <th>Nombre</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Aquí puedes añadir más jugadores dinámicamente -->
-                <tr>
-                    <td>001</td>
-                    <td>Leo</td>
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td>Nykara</td>
-                </tr>
-                <tr>
-                    <td>003</td>
-                    <td>Zara</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- Sección de comunidad -->
-    <section id="comunidad" class="section">
-        <h2>Únete a la Comunidad</h2>
-        <p>Conéctate con otros jugadores y comparte tus mejores creaciones.</p>
-        <a href="https://discord.gg/nHhpwcJG8x" class="btn" target="_blank">Unirte al Discord</a>
+        <div class="player-list">
+            <!-- Aquí puedes agregar tarjetas de jugadores -->
+            <div class="player-card">
+                <h3>Jugador: Leo</h3>
+                <p>ID: 001</p>
+            </div>
+            <div class="player-card">
+                <h3>Jugador: Zara</h3>
+                <p>ID: 002</p>
+            </div>
+            <!-- Añade más jugadores aquí -->
+        </div>
     </section>
 
     <!-- Pie de página -->
