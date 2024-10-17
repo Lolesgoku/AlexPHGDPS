@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jugadores - AlexPHGPDS</title>
+    <title>Perfil del Jugador - AlexPHGPDS</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Estilos generales */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -17,73 +16,99 @@
             color: #fff;
         }
 
-        h1, h2 {
+        .perfil-container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #2f2f4f;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .perfil-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .perfil-header h1 {
+            font-size: 2.5em;
             color: #ff7f50;
         }
 
-        p, a {
-            color: #eee;
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
         }
 
-        a {
-            text-decoration: none;
-        }
-
-        /* Tabla de jugadores */
-        table {
-            width: 80%;
-            margin: 50px auto;
-            background-color: #333;
-            color: white;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #444;
-        }
-
-        th {
+        .stats div {
             background-color: #444;
+            padding: 20px;
+            border-radius: 15px;
+            width: 120px;
+            text-align: center;
         }
 
-        tr:hover {
-            background-color: #555;
+        .icons {
+            margin-top: 30px;
+        }
+
+        .icon {
+            display: inline-block;
+            background-color: #333;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 15px;
+        }
+
+        .icon img {
+            max-width: 50px;
         }
 
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Jugadores de AlexPHGPDS</h1>
-        <p>Lista de jugadores registrados en el servidor</p>
-    </header>
+    <div class="perfil-container">
+        <div class="perfil-header">
+            <h1>Nombre del Jugador: LOLESCO</h1>
+            <span>Global Rank: 2</span>
+        </div>
 
-    <section class="jugadores-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Nivel</th>
-                    <th>Puntuación</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Jugador1</td>
-                    <td>15</td>
-                    <td>1200</td>
-                </tr>
-                <tr>
-                    <td>Jugador2</td>
-                    <td>10</td>
-                    <td>900</td>
-                </tr>
-                <!-- Más jugadores se podrán añadir aquí dinámicamente -->
-            </tbody>
-        </table>
-    </section>
+        <!-- Estadísticas del jugador -->
+        <div class="stats">
+            <div>
+                <h3>Estrellas</h3>
+                <p>0</p>
+            </div>
+            <div>
+                <h3>Monedas Doradas</h3>
+                <p>0</p>
+            </div>
+            <div>
+                <h3>Monedas Plateadas</h3>
+                <p>0</p>
+            </div>
+            <div>
+                <h3>Demonios</h3>
+                <p>0</p>
+            </div>
+        </div>
+
+        <!-- Iconos desbloqueados -->
+        <div class="icons">
+            <h2>Iconos Desbloqueados</h2>
+            <div class="icon"><img src="cube.png" alt="Cube Icon"></div>
+            <div class="icon"><img src="ship.png" alt="Ship Icon"></div>
+            <div class="icon"><img src="ball.png" alt="Ball Icon"></div>
+            <div class="icon"><img src="ufo.png" alt="UFO Icon"></div>
+            <div class="icon"><img src="wave.png" alt="Wave Icon"></div>
+            <div class="icon"><img src="robot.png" alt="Robot Icon"></div>
+            <div class="icon"><img src="spider.png" alt="Spider Icon"></div>
+        </div>
+    </div>
 
 </body>
 </html>
