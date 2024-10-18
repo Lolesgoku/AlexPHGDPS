@@ -18,6 +18,7 @@
             padding: 20px 0;
             text-align: center;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
         }
         header h1 {
             font-size: 2.5em;
@@ -46,6 +47,20 @@
         nav a:hover {
             background-color: #ffcc00;
             color: #333;
+        }
+        #auth-links {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        #auth-links a {
+            color: #ffcc00;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        #auth-links a:hover {
+            color: #fff;
         }
         main {
             padding: 40px;
@@ -85,13 +100,17 @@
     <header>
         <h1>AlexPHGDPS</h1>
         <p>Servidor personalizado de Geometry Dash</p>
+        <div id="auth-links">
+            <a href="registro.html">Registro</a>
+            <a href="login.html">Inicio de sesión</a>
+        </div>
     </header>
 
     <nav>
         <a href="niveles.html">Niveles</a>
         <a href="jugadores.html">Jugadores</a>
         <a href="noticias.html">Noticias</a>
-        <a href="descargas.html">Descargas</a> <!-- Enlace actualizado -->
+        <a href="descargas.html">Descargas</a>
     </nav>
 
     <main>
