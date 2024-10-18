@@ -25,10 +25,6 @@
             margin: 0;
             letter-spacing: 2px;
         }
-        header p {
-            font-size: 1.2em;
-            margin: 10px 0 0;
-        }
         nav {
             background-color: #333;
             padding: 15px;
@@ -48,19 +44,57 @@
             background-color: #ffcc00;
             color: #333;
         }
-        #auth-links {
+        #auth-buttons {
             position: absolute;
             top: 20px;
             right: 20px;
         }
-        #auth-links a {
-            color: #ffcc00;
+        #auth-buttons button {
+            background-color: #ffcc00;
+            color: #282828;
+            border: none;
+            padding: 10px 20px;
             margin: 0 10px;
-            text-decoration: none;
             font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        #auth-links a:hover {
-            color: #fff;
+        #auth-buttons button:hover {
+            background-color: #ffaa00;
+        }
+        #login-form, #register-form {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            width: 300px;
+        }
+        #login-form input, #register-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: #f5f5f5;
+        }
+        #login-form button, #register-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffcc00;
+            color: #282828;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+        #login-form button:hover, #register-form button:hover {
+            background-color: #ffaa00;
         }
         main {
             padding: 40px;
@@ -99,10 +133,22 @@
 
     <header>
         <h1>AlexPHGDPS</h1>
-        <p>Servidor personalizado de Geometry Dash</p>
-        <div id="auth-links">
-            <a href="registro.html">Registro</a>
-            <a href="login.html">Inicio de sesión</a>
+        <div id="auth-buttons">
+            <button id="login-button">Inicio de sesión</button>
+            <button id="register-button">Registro</button>
+        </div>
+        <div id="login-form">
+            <h3>Inicia sesión</h3>
+            <input type="text" placeholder="Usuario" />
+            <input type="password" placeholder="Contraseña" />
+            <button>Entrar</button>
+        </div>
+        <div id="register-form">
+            <h3>Regístrate</h3>
+            <input type="text" placeholder="Usuario" />
+            <input type="email" placeholder="Correo electrónico" />
+            <input type="password" placeholder="Contraseña" />
+            <button>Registrarse</button>
         </div>
     </header>
 
@@ -122,6 +168,23 @@
     <footer>
         <p>&copy; 2024 AlexPHGDPS. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        const loginButton = document.getElementById('login-button');
+        const registerButton = document.getElementById('register-button');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+
+        loginButton.addEventListener('click', () => {
+            registerForm.style.display = 'none'; // Ocultar formulario de registro
+            loginForm.style.display = loginForm.style.display === 'block' ? 'none' : 'block';
+        });
+
+        registerButton.addEventListener('click', () => {
+            loginForm.style.display = 'none'; // Ocultar formulario de inicio de sesión
+            registerForm.style.display = registerForm.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
 
 </body>
 </html>
