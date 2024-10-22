@@ -6,6 +6,7 @@
     <title>Descargas - AlexPHGDPS</title>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <style>
+        /* Estilo general */
         body {
             margin: 0;
             padding: 0;
@@ -13,10 +14,116 @@
             background-color: #000;
             color: #fff;
         }
-        /* Estilos generales (mismos que usabas antes) */
+
+        header {
+            background-color: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            color: #00ffcc;
+            text-shadow: 2px 2px #005050;
+            font-size: 2.5em;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-shadow: 2px 2px #005050;
+        }
+
+        header nav ul li a:hover {
+            color: #ffcc00;
+            text-shadow: 2px 2px #504000;
+        }
+
+        /* Descargas Section */
+        .descargas {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #111;
+        }
+
+        .descargas h2 {
+            font-size: 2.5em;
+            color: #00ffcc;
+            text-shadow: 2px 2px #005050;
+        }
+
+        .download-links {
+            margin: 40px 0;
+        }
+
+        .download-links a {
+            display: block;
+            color: #ffcc00;
+            font-size: 1.5em;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 20px 0;
+            border: 2px solid #00ffcc;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .download-links a:hover {
+            background-color: #00ffcc;
+            color: #000;
+        }
+
+        /* Tutorial Section */
+        .tutorial {
+            padding: 50px 20px;
+            background-color: #111;
+        }
+
+        .tutorial h2 {
+            font-size: 2.2em;
+            color: #00ffcc;
+            text-shadow: 2px 2px #005050;
+        }
+
+        .tutorial p {
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: #ddd;
+        }
+
+        .tutorial ol {
+            margin: 20px 0;
+            color: #ddd;
+            font-size: 1.2em;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #1a1a1a;
+        }
+
+        footer p {
+            color: #fff;
+        }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="logo">
             <h1>AlexPHGDPS</h1>
@@ -29,77 +136,42 @@
                 <li><a href="tools.html">Tools</a></li>
             </ul>
         </nav>
-        <!-- Selector de idioma -->
-        <select id="language-switcher" onchange="changeLanguage()">
-            <option value="es">Español</option>
-            <option value="en">English</option>
-        </select>
     </header>
 
-    <section>
-        <h2>Descargas para AlexPHGDPS</h2>
-        <p>Elige la versión adecuada para tu dispositivo:</p>
-        <ul>
-            <li><a href="https://www.mediafire.com/file/2yrgp3i01spe9md/AlexPHGDPS.apk/file">Descargar para Android (.apk)</a></li>
-            <li><a href="https://www.mediafire.com/file/8vugeajwscp3q8f/AlexPHGDPS.zip/file">Descargar para Windows (.zip)</a></li>
-        </ul>
+    <!-- Descargas Section -->
+    <section id="descargas" class="descargas">
+        <h2>Descargas de AlexPHGDPS</h2>
+        <p>Selecciona el archivo adecuado según tu dispositivo:</p>
 
-        <h3>Cómo registrarse en el GDPS:</h3>
-        <ol>
-            <li>Dentro del GDPS, ve a la configuración (ícono de tuerca).</li>
-            <li>Selecciona "Account" y luego "Register".</li>
-            <li>Ingresa tu nombre de usuario y una contraseña.</li>
-            <li>Introduce un correo inventado (no pongas tu correo real, por ejemplo: papu@gmail.com).</li>
-            <li>Retrocede y selecciona "Login" para acceder a tu cuenta con el usuario y la contraseña que creaste.</li>
-        </ol>
+        <div class="download-links">
+            <a href="https://www.mediafire.com/file/2yrgp3i01spe9md/AlexPHGDPS.apk/file" class="btn">Descargar APK (Android)</a>
+            <a href="https://www.mediafire.com/file/8vugeajwscp3q8f/AlexPHGDPS.zip/file" class="btn">Descargar ZIP (PC)</a>
+        </div>
     </section>
 
+    <!-- Tutorial de Registro Section -->
+    <section id="tutorial" class="tutorial">
+        <h2>Cómo registrarse en AlexPHGDPS</h2>
+        <p>Sigue estos pasos para crear una cuenta en AlexPHGDPS:</p>
+
+        <ol>
+            <li>Abre el juego y ve a la pantalla principal.</li>
+            <li>Haz clic en el ícono de la **tuerca** (configuración) en la esquina.</li>
+            <li>Dentro de la configuración, selecciona "Account".</li>
+            <li>En la pantalla de Account, selecciona "Register" para crear tu cuenta.</li>
+            <li>Ingresa tu **nombre de usuario** y **contraseña**, que usarás para iniciar sesión.</li>
+            <li>En el campo de **correo electrónico**, no pongas un correo real. Por ejemplo, usa algo como: `papu@gmail.com`.</li>
+            <li>Después de completar el registro, ve hacia atrás y selecciona "Login".</li>
+            <li>Ingresa tu **nombre de usuario** y **contraseña** para iniciar sesión.</li>
+        </ol>
+
+        <p>¡Y listo! Ahora podrás acceder a tu cuenta dentro del GDPS.</p>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>© 2024 AlexPHGDPS. Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        const languageContent = {
-            "es": {
-                "header": {
-                    "inicio": "Inicio",
-                    "descargas": "Descargas",
-                    "contacto": "Contacto",
-                    "tools": "Tools"
-                },
-                "download": {
-                    "title": "Descargas para AlexPHGDPS",
-                    "android": "Descargar para Android (.apk)",
-                    "windows": "Descargar para Windows (.zip)",
-                    "how-to-register": "Cómo registrarse en el GDPS:"
-                }
-            },
-            "en": {
-                "header": {
-                    "inicio": "Home",
-                    "descargas": "Downloads",
-                    "contacto": "Contact",
-                    "tools": "Tools"
-                },
-                "download": {
-                    "title": "Downloads for AlexPHGDPS",
-                    "android": "Download for Android (.apk)",
-                    "windows": "Download for Windows (.zip)",
-                    "how-to-register": "How to register in the GDPS:"
-                }
-            }
-        };
-
-        function changeLanguage() {
-            const selectedLang = document.getElementById('language-switcher').value;
-            document.querySelector('h2').textContent = languageContent[selectedLang].download.title;
-            const links = document.querySelectorAll('ul li a');
-            links[0].textContent = languageContent[selectedLang].download.android;
-            links[1].textContent = languageContent[selectedLang].download.windows;
-
-            const stepsTitle = document.querySelector('h3');
-            stepsTitle.textContent = languageContent[selectedLang].download['how-to-register'];
-        }
-    </script>
 </body>
 </html>
