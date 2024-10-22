@@ -6,7 +6,7 @@
     <title>Contacto - AlexPHGDPS</title>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <style>
-        /* Página de contacto */
+        /* Estilo general */
         body {
             margin: 0;
             padding: 0;
@@ -49,10 +49,11 @@
             text-shadow: 2px 2px #504000;
         }
 
+        /* Contact Section */
         .contact {
             padding: 50px 20px;
-            background-color: #1a1a1a;
             text-align: center;
+            background-color: #111;
         }
 
         .contact h2 {
@@ -63,68 +64,37 @@
 
         .contact p {
             font-size: 1.2em;
-            color: #fff;
-            margin-bottom: 30px;
+            margin: 20px 0;
+            color: #ddd;
         }
 
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #333;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 4px 4px 8px #000;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 1.2em;
+        .contact a {
             color: #ffcc00;
-            text-shadow: 2px 2px #502000;
-        }
-
-        .form-group input, 
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: none;
+            font-size: 1.5em;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #00ffcc;
             border-radius: 10px;
-            font-size: 1em;
+            transition: background-color 0.3s ease;
         }
 
-        .form-group input {
-            background-color: #222;
-            color: #fff;
-        }
-
-        .form-group textarea {
-            background-color: #222;
-            color: #fff;
-            resize: none;
-        }
-
-        .btn {
+        .contact a:hover {
             background-color: #00ffcc;
             color: #000;
-            padding: 15px 30px;
-            border-radius: 10px;
+        }
+
+        .rules ul {
+            list-style: none;
+            padding: 0;
             font-size: 1.2em;
-            text-decoration: none;
-            text-shadow: 2px 2px #005050;
-            border: none;
-            cursor: pointer;
+            color: #ddd;
         }
 
-        .btn:hover {
-            background-color: #ffcc00;
-            text-shadow: 2px 2px #504000;
-            color: #000;
+        .rules ul li {
+            margin: 10px 0;
         }
 
+        /* Footer */
         footer {
             padding: 20px;
             text-align: center;
@@ -147,33 +117,30 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="descargas.html">Descargas</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="tools.html">Tools</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Contact Section -->
-    <section id="contacto" class="contact">
-        <h2>Contacto</h2>
-        <p>¿Tienes alguna pregunta o comentario? No dudes en ponerte en contacto con nosotros utilizando el formulario a continuación.</p>
-        
-        <form action="submit_form.php" method="POST">
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
+    <section id="contact" class="contact">
+        <h2>Contacto de Soporte</h2>
+        <p>Si necesitas ayuda o tienes alguna duda relacionada con AlexPHGDPS, puedes escribirnos a:</p>
+        <a href="mailto:lolesgokugd@gmail.com">lolesgokugd@gmail.com</a>
 
-            <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+        <h2>Reglas de contacto</h2>
+        <p>Por favor, no envíes mensajes que incluyan lo siguiente, ya que pueden resultar en un **baneo**:</p>
 
-            <div class="form-group">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-            </div>
-
-            <button type="submit" class="btn">Enviar Mensaje</button>
-        </form>
+        <div class="rules">
+            <ul>
+                <li>Mensajes troll o fuera de lugar.</li>
+                <li>Contenido inapropiado o ofensivo.</li>
+                <li>Spam o mensajes repetitivos.</li>
+                <li>Peticiones irrelevantes o sin sentido.</li>
+                <li>Falsas denuncias o reportes inventados.</li>
+                <li>Solicitudes relacionadas con hacks o trampas.</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Footer -->
