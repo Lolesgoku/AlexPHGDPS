@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - AlexPHGDPS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Audiowide', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            color: #00ffcc;
+            text-shadow: 2px 2px #005050;
+            font-size: 2.5em;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-shadow: 2px 2px #005050;
+        }
+
+        header nav ul li a:hover {
+            color: #ffcc00;
+            text-shadow: 2px 2px #504000;
+        }
+
+        section.news {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #111;
+        }
+
+        .news h2 {
+            font-size: 2.5em;
+            color: #00ffcc;
+            text-shadow: 2px 2px #005050;
+        }
+
+        .news-article {
+            margin: 20px 0;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00ffcc;
+        }
+
+        .news-article h3 {
+            font-size: 1.8em;
+            color: #ffcc00;
+        }
+
+        .news-article p {
+            font-size: 1.2em;
+            color: #ddd;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #1a1a1a;
+        }
+
+        footer p {
+            color: #fff;
+        }
+
+        @media only screen and (max-width: 768px) {
+            header .logo h1 {
+                font-size: 2em;
+            }
+
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            header nav ul li a {
+                font-size: 1.5em;
+            }
+
+            section {
+                padding: 30px 10px;
+            }
+
+            .news-article h3 {
+                font-size: 1.5em;
+            }
+
+            .news-article p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>AlexPHGDPS</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="descargas.html">Descargas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="noticias.html">Noticias</a></li> <!-- Aquí está el enlace a Noticias -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Noticias Section -->
+    <section class="news">
+        <h2>Últimas Noticias</h2>
+
+        <!-- Ejemplo de noticia -->
+        <div class="news-article">
+            <h3>¡Nuevo Gauntlet Disponible!</h3>
+            <p>Participa en el nuevo Gauntlet de AlexPHGDPS. Crea tu mejor nivel y compite con otros jugadores por el primer lugar. ¡No te lo pierdas!</p>
+        </div>
+
+        <!-- Agrega más noticias aquí -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 AlexPHGDPS. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
