@@ -1,2 +1,2 @@
-# AlexPHGDPS
+# AlexGDPS
 La Mejor Pagina GDPS
